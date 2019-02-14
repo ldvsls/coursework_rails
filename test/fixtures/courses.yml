@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userID: MyString
+  coursename: MyString
+  progress: 
+  score: 
+
+two:
+  userID: MyString
+  coursename: MyString
+  progress: 
+  score: 

@@ -1,0 +1,26 @@
+ <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+  <form class="modal-content" action="/login" method="POST">
+    <div class="container">
+      <center>
+          <h1>Login</h1>
+      <p id="rcorners3">Please fill in this form to create an account.</p>
+      <hr>
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="login[email]" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="login[password]" required>
+      <div class="clearfix">
+        <center>
+          <div>
+            <a class="cancelbtn" href="/signup">Sign Up</a>
+          </div>
+        </center>
+        <input type="submit" name="submit" value = "Login">
+        <%if flash[:login_message]%>
+        <p><%=flash[:login_message]%></p>
+        <%end%>
+      </div>
+    </div>
+  </form>
